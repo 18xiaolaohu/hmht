@@ -4,6 +4,12 @@ const Login = () => import('@/views/Login')
 const Home = () => import('@/views/Home')
 const Main = () => import('@/views/Main')
 const Userlist = () => import('@/views/Userlist')
+const Roles = () => import('@/views/Roles')
+const Rights = () => import('@/views/Rights')
+const Goods = () => import('@/views/Goods')
+const Classification = () => import('@/views/Classification')
+const Categories = () => import('@/views/Categories')
+const Orders = () => import('@/views/Orders')
 
 Vue.use(VueRouter)
 
@@ -20,6 +26,48 @@ const routes = [
         component: Main,
         children: [
           { path: '/userlist', component: Userlist }
+        ]
+      },
+      {
+        path: '/main',
+        component: Main,
+        children: [
+          { path: '/roles', component: Roles }
+        ]
+      },
+      {
+        path: '/main',
+        component: Main,
+        children: [
+          { path: '/rights', component: Rights }
+        ]
+      },
+      {
+        path: '/main',
+        component: Main,
+        children: [
+          { path: '/goods', component: Goods }
+        ]
+      },
+      {
+        path: '/main',
+        component: Main,
+        children: [
+          { path: '/classification', component: Classification }
+        ]
+      },
+      {
+        path: '/main',
+        component: Main,
+        children: [
+          { path: '/categories', component: Categories }
+        ]
+      },
+      {
+        path: '/main',
+        component: Main,
+        children: [
+          { path: '/orders', component: Orders }
         ]
       }
     ]

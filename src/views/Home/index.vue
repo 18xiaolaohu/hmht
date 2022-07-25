@@ -4,7 +4,7 @@
     <el-header>
       <div class="my">
         <img src="@/assets/touxiang.jpg" alt="" />
-        <h3>宠物管理</h3>
+        <h3>后台</h3>
       </div>
       <el-button @click="retreat">退出</el-button>
     </el-header>
@@ -38,11 +38,11 @@
               <span>权限管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="2-1">
+              <el-menu-item index="/roles">
                 <i class="el-icon-menu"></i>
                 <span>角色列表</span>
               </el-menu-item>
-              <el-menu-item index="2-2">
+              <el-menu-item index="/rights">
                 <i class="el-icon-menu"></i>
                 <span>权限列表</span>
               </el-menu-item>
@@ -54,15 +54,15 @@
               <span>商品管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="3-1">
+              <el-menu-item index="/goods">
                 <i class="el-icon-menu"></i>
                 <span>商品列表</span>
               </el-menu-item>
-              <el-menu-item index="3-2">
+              <el-menu-item index="/classification">
                 <i class="el-icon-menu"></i>
                 <span>分类参数</span>
               </el-menu-item>
-              <el-menu-item index="3-3">
+              <el-menu-item index="/categories">
                 <i class="el-icon-menu"></i>
                 <span>商品分类</span>
               </el-menu-item>
@@ -74,7 +74,7 @@
               <span>订单管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="4-1">
+              <el-menu-item index="/orders">
                 <i class="el-icon-menu"></i>
                 <span>订单列表</span>
               </el-menu-item>
