@@ -18,17 +18,14 @@
               @click="putclick = true"
               >编辑</el-button
             >
-            <el-button
-              type="danger"
-              icon="el-icon-delete"
-              size="mini"
+            <el-button type="danger" icon="el-icon-delete" size="mini"
               >删除</el-button
             >
             <el-button
               type="warning"
               icon="el-icon-setting"
               size="mini"
-              @click="getRoles(scope.row.id)"
+              @click="putRoles(scope.row.id)"
               >分配权限</el-button
             >
           </template>
@@ -37,12 +34,9 @@
     </el-card>
     <!-- 分配权限 -->
     <el-dialog title="分配权限" :visible.sync="rightVisible" width="20%">
-      <el-tree
-      v-if="rightVisible"
-      :default-checked-keys="selectedPermissions"
-      ></el-tree>
+      <el-tree v-if="rightVisible"></el-tree>
       <template #footer>
-        <el-button type="primary" >确认</el-button>
+        <el-button type="primary">确认</el-button>
         <el-button @click="rightVisible = false">取消</el-button>
       </template>
     </el-dialog>
@@ -73,9 +67,10 @@ export default {
         console.log(err)
       }
     },
+    // 分配权限
     async putRoles (id) {
       try {
-        const res = await putRoles
+        const res = await putRoles(this.roleId)
         console.log(res)
         this.rightVisible = true
       } catch (err) {
